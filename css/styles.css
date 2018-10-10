@@ -74,7 +74,7 @@ body{
 
 .menuTopBarElemSelected a{
     color: #633967;
-    
+    pointer-events: none;
 }
 
 .menuTopBarElem a:hover{
