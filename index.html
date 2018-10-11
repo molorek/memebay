@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang = "sk">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,28 +11,59 @@
         <script src="js/script.js"></script>
     </head>
     <body>
+		
+		<div class="custom-table">
+			<div class="custom-row">
 
-        <div><img src = "img/memeBayLogo.png" id="logoImg" title="MemeBay"></div>
+				<div class="custom-cell">
+                    <div><img src = "img/memeBayLogo.png" id="logoImg" title="MemeBay"></div>
+                </div>
 
-        <nav id = "headerDiv">
-            <ul id = "menuTopBar">
-                <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
-                <li class = "menuTopBarElem"><a href="history.html" title="History of Internet Memes">History</a></li>
-                <li class = "menuTopBarElem">
-                    <a href="calendar.html" class="dropbtn" title="Find the most popular memes of the specific year">Memes' Calendar</a>
-                    <div class="dropdown-content">
-                        <a href="calendar16.html">2016</a>
-                        <a href="calendar17.html">2017</a>
-                        <a href="calendar18.html">2018</a>
-                        <a href="calendar19.html">2019</a>
+                <div class="custom-cell">
+                    <nav id = "headerDiv">
+                        <ul id = "menuTopBar">
+                            <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
+                            <li class = "menuTopBarElem"><a href="history.html" title="History of Internet Memes">History</a></li>
+                            <li class = "menuTopBarElem">
+                                <a href="calendar.html" class="dropbtn" title="Find the most popular memes of the specific year">Memes' Calendar</a>
+                                    <div class="dropdown-content">				<!-- Isn't used right now -->
+                                        <a href="calendar16.html">2016</a>
+                                        <a href="calendar17.html">2017</a>
+                                        <a href="calendar18.html">2018</a>
+                                        <a href="calendar19.html">2019</a>
+                                    </div>
+                            </li>  
+                            <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
+                            <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+
+            <div class="custom-row">
+				<div class="custom-cell">
+                    <div class="bodyText">
+                        <span>MEMEZ.<br /></span>
+                        <span style="color: #633967;">are ART.</span>
                     </div>
-                </li>  
-                <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
-                <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
-            </ul>
-        </nav>
+                </div>
+                
+                <div class="custom-cell">
+                    <div class="bodyCircle">
+                        <div id="mainCircleMemeID"    class="mainCircleMeme"    title=""></div>
+                        <div id="mainCircleMemeTopID" class="mainCircleMemeTop" title=""></div>
+                    </div>
+                </div>
+            </div>
 
-        <div id="bodyDiv">
+		</div>
+		
+		
+		
+		<!-- Isn't responsive web-desing -->
+
+<!--         <div id="bodyDiv">										
             <div class="bodyText">
                 <div>MEMEZ.<br /></div>
                 <div style="color: #633967;">are ART.</div>
@@ -40,21 +72,9 @@
                 <img src = ""  id="mainCircleMemeID"    class="mainCircleMeme"    title="">
                 <img src = ""  id="mainCircleMemeTopID" class="mainCircleMemeTop" title="">
             </div>
-        </div>
-
-<!--         <div id = "bodyBackDiv">
-                <img src = "img/olivie.jpg" class = "memeImg" title="хочю оливье">
-                <img src = "img/wyw.png" class = "memeImg" title="when you walking">
-                <img src = "img/pivo.jpg" class = "memeImg" title="быстро метнулся за пивом. я засек">
-                <img src = "img/bolt.jpg" class = "memeImg" title="я негр. я болт">
-                <img src = "img/french_fries.jpg" class = "memeImg" title="хочю оливье">
-                <img src = "img/mauz.jpg" class = "memeImg">
-                <img src = "img/kot.jpg" class = "memeImg">
-                <img src = "img/morg.jpg" class = "memeImg">
-                <img src = "img/ss.jpg" class = "memeImg">
-                <img src = "img/whore.jpg" class = "memeImg">
         </div> -->
-
+		
+		<!-- <a href = "Dokumentácia k web stránke.pdf">Webová dokumentacia</a> -->
 
         <script>displayImage();</script>
     </body>

@@ -7,10 +7,8 @@ body{
 }
 
 #logoImg{   
-    margin-top: -8px;
-    margin-left: 10px;
     display: inline;
-    float: left;
+    position: absolute;
 }
 
 /*
@@ -25,19 +23,21 @@ body{
 
 #menuTopBar{          
     width: 80%;
+    margin-left: 15%;
     overflow: auto;  
 }
 
 .menuTopBarElem, .dropdown-content, .menuTopBarElemSelected{
-    margin-top: 5px;      
     float: right;
     overflow: hidden;
     display: inline-block; 
+    margin: 10px; 
+    /* margin-top: 5px;  */
 }
 
 .menuTopBarElem a, .dropbtn , .dropdown-content a, .menuTopBarElemSelected a{
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 18px; 
+    font-size: 22px; 
     font-style: normal; 
     font-variant: normal; 
     font-weight: 400; 
@@ -48,8 +48,8 @@ body{
     text-decoration: none;
     transform: scale(1,1);
 
-    margin:4px;
-    padding: 8px 10px;
+/*     margin:4px;
+    padding: 8px 10px; */
 
     transition-property: transform;
     transition-duration: .75s;
@@ -79,7 +79,7 @@ body{
 
 .menuTopBarElem a:hover{
     color: #fac7ff;
-    transform: scale(1.1,1.1);
+    transform: scale(1.05,1.05);
     transition-duration: .5s;
 }
 
@@ -95,35 +95,62 @@ body{
     Наполнение страницы
 */
 
+.custom-table{
+	display: table;
+    width: 100%;
+
+/* 	border: 5px solid red; */
+}
+
+.custom-row{
+	display: table-row;
+    margin: auto; 
+}
+
+
+.custom-cell{
+    display: table-cell;
+    width: 50%;
+    margin: auto;
+
+/*     border: 3px solid green; */
+}
+
+
 #bodyDiv{
-/*  */
+
 }
 
 .bodyText{
+    position: relative;
+    float: right;
+    margin-top: 175px;
+    margin-right: 200px;
+
     font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
     font-size: 135px; 
     font-style: normal; 
     font-variant: normal; 
     font-weight: 700; 
-    line-height: 26.4px; 
+    line-height: 120px; 
 
     display: inline-block;
     color: #f099f7; 
     text-decoration: none;
     
-    padding: 0px 10px; 
+/*     padding: 0px 10px; 
     margin: 84px; 
     margin-top: 160px; 
-    margin-left: -100px
+    margin-left: -100px */
 }
 
-.bodyText div{
+/* .bodyText div{
     padding: 45px 0px;
     position: relative;
 
     top: 0;
     left: 0;
-}
+} */
 
 .bodyCircle{
     position: relative;
@@ -150,10 +177,6 @@ body{
 
     top: 0;
     left: 0;
-
-    transform: scale(1,1);
-    transition-property: transform;
-    transition-duration: .5s;
 }
 
 .mainCircleMemeTop{
@@ -165,36 +188,4 @@ body{
 
     top: 0;
     left: 0;
-
-    transform: scale(1,1);
-    transition-property: transform;
-    transition-duration: .5s;
 }
-
-/* .mainCircleMeme:hover{
-    transform: scale(1.1,1.1);
-    transition-duration: .5s;
-} */
-
-
-/* .memeImg{
-    border: 1px solid #7E127E;
-    border-radius: 50%;
-
-    width: 200px;
-    height: 200px;
-
-    margin: 11px;
-
-    filter: blur(8px);
-
-    transition-property: border-radius;
-    transition-duration: 1s;
-}
-
-.memeImg:hover{
-    border-radius: 30%;
-
-    transition-duration: .3s;
-    transition-delay: .05s;
-} */
