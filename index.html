@@ -12,52 +12,65 @@
     </head>
     <body>
 		
-		<div class="custom-table">
-			<div class="custom-row">
+        <div class="row">
 
-				<div class="custom-cell">
-                    <div><img src = "img/memeBayLogo.png" id="logoImg" title="MemeBay"></div>
-                </div>
+            <map name="logoimgmap">
+                <area shape="circle" coords="0,0,90" title="FROG" alt="FROG" href="#frog">
+                <area shape="rect" coords="0,0,200,200" title="TITLE" alt="TITLE" href="#title">
+            </map>
+            
 
-                <div class="custom-cell">
-                    <nav id = "headerDiv">
-                        <ul id = "menuTopBar">
-                            <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
-                            <li class = "menuTopBarElem"><a href="history.html" title="History of Internet Memes">History</a></li>
-                            <li class = "menuTopBarElem">
-                                <a href="calendar.html" class="dropbtn" title="Find the most popular memes of the specific year">Memes' Calendar</a>
-                                    <div class="dropdown-content">				<!-- Isn't used right now -->
-                                        <a href="calendar16.html">2016</a>
-                                        <a href="calendar17.html">2017</a>
-                                        <a href="calendar18.html">2018</a>
-                                        <a href="calendar19.html">2019</a>
-                                    </div>
-                            </li>  
-                            <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
-                            <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
+            <div class="col-6">
+                <div><img src = "img/memeBayLogo.png" id="logoImg" alt="MemeBay Logo" usemap="#logoimgmap"></div>
             </div>
 
-            <div class="custom-row">
-				<div class="custom-cell">
-                    <div class="bodyText">
-                        <span>MEMEZ.<br /></span>
-                        <span style="color: #633967;">are ART.</span>
-                    </div>
-                </div>
-                
-                <div class="custom-cell">
-                    <div class="bodyCircle">
-                        <div id="mainCircleMemeID"    class="mainCircleMeme"    title=""></div>
-                        <div id="mainCircleMemeTopID" class="mainCircleMemeTop" title=""></div>
-                    </div>
+            <div class=col-6>
+                <nav id = "headerDiv">
+                    <ul id = "menuTopBar">
+                        <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
+                        <li class = "menuTopBarElem"><a href="history.html" title="History of Internet Memes">History</a></li>
+                        <li class = "menuTopBarElem">
+                            <a href="calendar.html" class="dropbtn" title="Find the most popular memes of the specific year">Memes' Calendar</a>
+                                <div class="dropdown-content">				<!-- Isn't used right now -->
+                                    <a href="calendar16.html">2016</a>
+                                    <a href="calendar17.html">2017</a>
+                                    <a href="calendar18.html">2018</a>
+                                    <a href="calendar19.html">2019</a>
+                                </div>
+                        </li>  
+                        <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
+                        <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+
+        <div class="row" style="margin-top:100px;">
+            <div class="col-6">
+                <div class="bodyText">
+                    <span>MEMEZ.<br /></span>
+                    <span style="color: #633967;">are ART.</span>
                 </div>
             </div>
 
-		</div>
+            <div class="col-6">
+                <div class="bodyCircle">
+                    <div id="mainCircleMemeID"    class="mainCircleMeme"    title=""></div>
+                    <div id="mainCircleMemeTopID" class="mainCircleMemeTop" title=""></div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row" style="margin-top:210px;">
+            <div class="col-12">
+                <div class="menuTopBarElem" style="float:left;">
+                    <a href = "Dokumentácia k web stránke.pdf" style="font-size: 12px;">Webová dokumentacia</a>
+                </div>
+            </div>
+        </div>
+    
 		
 		
 		
@@ -73,9 +86,6 @@
                 <img src = ""  id="mainCircleMemeTopID" class="mainCircleMemeTop" title="">
             </div>
         </div> -->
-		
-		<!-- <a href = "Dokumentácia k web stránke.pdf">Webová dokumentacia</a> -->
-
         <script>displayImage();</script>
     </body>
 </html>
