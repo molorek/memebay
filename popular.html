@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Popular</title>
+        <meta name="description" content="Popular">
+		<meta name="author" content="Illia Bielikov">
+		<meta name="keywords" content="popular, hot, af">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/png">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/script.js"></script>
+    </head>
+
+    <body onload='
+		setMemeInCircle(0, "mainCircleMemePatrick", "mainCircleMemeTopPatrick");
+		setMemeInCircle(1, "mainCircleMemeAlex", "mainCircleMemeTopAlex");
+        setMemeInCircle(2, "mainCircleMemeSkel", "mainCircleMemeTopSkel");
+        setMemeInCircle(3, "mainCircleMemePing", "mainCircleMemeTopPing");
+        setMemeInCircle(4, "mainCircleMemePika", "mainCircleMemeTopPika");
+        setMemeText(0)
+	'>
+        <header>
+            <div><img src = "img/memeBayLogo.png" id="logoImg" title="MemeBay"></div>
+
+            <nav id = "headerDiv">
+                <ul id = "menuTopBar">
+                    <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
+                    <li class = "menuTopBarElem"><a href="random.html" title="???">???</a></li>
+                    <li class = "menuTopBarElem">
+                        <a href="why.html" class="dropbtn" title="MEME PERIODS">MEME PERIODS</a>
+                            <div class="dropdown-content">
+                                <a href="spooktoba.html">Spooktober</a>
+                                <a href="nnn.html"      >No Nut November</a>
+                                <a href="404.html">DESTROY DICK-CEMBER</a>
+                                <a href="dragonborn.html">DRAGONBORN</a>
+                            </div>
+                    </li>  
+                    <li class = "menuTopBarElemSelected"><a href="popular.html" title="HOT AF">Popular</a></li>
+                    <li class = "menuTopBarElem"><a href="index.html" title="Homepage, you know">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="blackBackPopular" class="" onclick="backOnClick();"> </div>
+
+		<div id="bcpb" style="animation-delay: 0.0s;">
+			<div id="mcmtpb" title=""></div>
+			<div id="mcmpb" title=""></div>
+		</div>
+
+		<article id="popularNameText">
+			<span>1</span>
+		</article>
+		<article id="popularText">
+			<span>1</span>
+		</article>
+
+
+        <ul class="centerBlock" style="width: 90%; margin-left: 50px; margin-top: -150px;">
+
+            <li class="bodyCirclePopular" style="animation-delay: 0.0s;" onclick="memeOnClick(0);">
+                <div id="mainCircleMemeTopPatrick"  class="mainCircleMemeTopP" title=""></div>
+                <div id="mainCircleMemePatrick"     class="mainCircleMemeP"    title=""></div>
+            </li>
+
+            <li class="bodyCirclePopular" style="animation-delay: 1.0s;" onclick="memeOnClick(1);">
+                <div id="mainCircleMemeTopAlex"     class="mainCircleMemeTopP" title="" style = "animation-delay: 1.0s;"></div>
+                <div id="mainCircleMemeAlex"        class="mainCircleMemeP"    title="" style = "animation-delay: 1.0s;"></div>
+            </li>
+
+            <li class="bodyCirclePopular" style="animation-delay: 2.0s;" onclick="memeOnClick(2);">
+                <div id="mainCircleMemeTopSkel" class="mainCircleMemeTopP" title="" style = "animation-delay: 2.0s;"></div>
+                <div id="mainCircleMemeSkel"    class="mainCircleMemeP"    title="" style = "animation-delay: 2.0s;"></div>
+            </li>
+
+            <li class="bodyCirclePopular" style="animation-delay: 3.0s;" onclick="memeOnClick(3);">
+                <div id="mainCircleMemeTopPing" class="mainCircleMemeTopP" title="" style = "animation-delay: 3.0s;"></div>
+                <div id="mainCircleMemePing"    class="mainCircleMemeP"    title="" style = "animation-delay: 3.0s;"></div>
+            </li>
+            
+            <li class="bodyCirclePopular" style="animation-delay: 4.0s;" onclick="memeOnClick(4);" > 
+                <div id="mainCircleMemeTopPika" class="mainCircleMemeTopP" title="" style = "animation-delay: 4.0s;"></div>
+                <div id="mainCircleMemePika"    class="mainCircleMemeP"    title="" style = "animation-delay: 4.0s;"></div>
+            </li>
+
+
+        </ul>
+<!--
+        <script>setMemeInCircle(0, "mainCircleMemePatrick", "mainCircleMemeTopPatrick")</script>
+        <script>setMemeInCircle(1, "mainCircleMemeAlex", "mainCircleMemeTopAlex")</script>
+        <script>setMemeInCircle(2, "mainCircleMemeSkel", "mainCircleMemeTopSkel")</script>
+        <script>setMemeInCircle(3, "mainCircleMemePing", "mainCircleMemeTopPing")</script>
+        <script>setMemeInCircle(4, "mainCircleMemePika", "mainCircleMemeTopPika")</script>
+        <script>setMemeText(0)</script>
+-->
+    </body>
+</html>

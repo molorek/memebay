@@ -1,91 +1,52 @@
 <!DOCTYPE html>
-<html lang = "sk">
+<html lang = "en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>MemeBay</title>
-        <meta name="description" content="">
+        <meta name="description" content="Memebay">
+		<meta name="author" content="Illia Bielikov">
+		<meta name="keywords" content="meme, bay">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="shortcut icon" href="icons/favicon.ico" type="image/png">
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/script.js"></script>
     </head>
-    <body>
-		
-        <div class="row">
 
-            <map name="logoimgmap">
-                <area shape="circle" coords="0,0,90" title="FROG" alt="FROG" href="#frog">
-                <area shape="rect" coords="0,0,200,200" title="TITLE" alt="TITLE" href="#title">
-            </map>
-            
+    <body onload='setMemeInCircle(0, "mainCircleMemeID", "mainCircleMemeTopID");'>
+        <header>
+            <div><img src = "img/memeBayLogo.png" id="logoImg" title="MemeBay"></div>
 
-            <div class="col-6">
-                <div><img src = "img/memeBayLogo.png" id="logoImg" alt="MemeBay Logo" usemap="#logoimgmap"></div>
-            </div>
+            <nav id = "headerDiv">
+                <ul id = "menuTopBar">
+                    <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
+                    <li class = "menuTopBarElem"><a href="random.html" title="???">???</a></li>
+                    <li class = "menuTopBarElem">
+                        <a href="why.html" class="dropbtn" title="MEME PERIODS">MEME PERIODS</a>
+                            <div class="dropdown-content">	
+                                <a href="spooktoba.html">Spooktober</a>
+                                <a href="nnn.html"      >No Nut November</a>
+                                <a href="404.html"      >DESTROY DICK-CEMBER</a>
+                                <a href="dragonborn.html">DRAGONBORN</a>
+                            </div>
+                    </li>  
+                    <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
+                    <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
+                </ul>
+            </nav>
+        </header>
 
-            <div class=col-6>
-                <nav id = "headerDiv">
-                    <ul id = "menuTopBar">
-                        <li class = "menuTopBarElem"><a href="contact.html" title="How to contact me">Contact</a></li>
-                        <li class = "menuTopBarElem"><a href="history.html" title="History of Internet Memes">History</a></li>
-                        <li class = "menuTopBarElem">
-                            <a href="calendar.html" class="dropbtn" title="Find the most popular memes of the specific year">Memes' Calendar</a>
-                                <div class="dropdown-content">				<!-- Isn't used right now -->
-                                    <a href="calendar16.html">2016</a>
-                                    <a href="calendar17.html">2017</a>
-                                    <a href="calendar18.html">2018</a>
-                                    <a href="calendar19.html">2019</a>
-                                </div>
-                        </li>  
-                        <li class = "menuTopBarElem"><a href="popular.html" title="HOT AF">Popular</a></li>
-                        <li class = "menuTopBarElemSelected"><a href="index.html" title="Homepage, you know">Home</a></li>
-                    </ul>
-                </nav>
-            </div>
+        <ul class="centerBlock" style="overflow: hidden; height: 102%; margin-left: -40px;">
+            <li class="bodyCircle" id="homepageCircle">
+                <div id="mainCircleMemeTopID" class="mainCircleMemeTop" title=""></div>
+                <div id="mainCircleMemeID"    class="mainCircleMeme"    title=""></div>
+            </li>
 
-        </div>
-
-        <div class="row" style="margin-top:100px;">
-            <div class="col-6">
-                <div class="bodyText">
-                    <span>MEMEZ.<br /></span>
-                    <span style="color: #633967;">are ART.</span>
-                </div>
-            </div>
-
-            <div class="col-6">
-                <div class="bodyCircle">
-                    <div id="mainCircleMemeID"    class="mainCircleMeme"    title=""></div>
-                    <div id="mainCircleMemeTopID" class="mainCircleMemeTop" title=""></div>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="row" style="margin-top:210px;">
-            <div class="col-12">
-                <div class="menuTopBarElem" style="float:left;">
-                    <a href = "Dokumentácia k web stránke.pdf" style="font-size: 12px;">Webová dokumentacia</a>
-                </div>
-            </div>
-        </div>
-    
-		
-		
-		
-		<!-- Isn't responsive web-desing -->
-
-<!--         <div id="bodyDiv">										
-            <div class="bodyText">
-                <div>MEMEZ.<br /></div>
-                <div style="color: #633967;">are ART.</div>
-            </div>
-            <div class="bodyCircle">
-                <img src = ""  id="mainCircleMemeID"    class="mainCircleMeme"    title="">
-                <img src = ""  id="mainCircleMemeTopID" class="mainCircleMemeTop" title="">
-            </div>
-        </div> -->
-        <script>displayImage();</script>
+            <li class="bodyText">
+                <span>MEMEZ.<br /></span>
+                <span style="color: #633967;">are ART.</span>
+            </li>
+        </ul>
     </body>
 </html>

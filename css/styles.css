@@ -1,211 +1,773 @@
-* {
-    box-sizing: border-box;
-}
-
-.col-1 {width: 8.33%; height:auto;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%; height: auto;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    /* border: 1px solid red; */
-}
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-
-
 html, body {
-    height: 90%;
+    height:                 90%;
 }
 
 body{
-    background-color: #b862bf;
+    background-color:     	#b862bf;
+    overflow:               hidden;
 }
 
-#logoImg{   
-    display: inline;
-    position: absolute;
+footer{
+    background-color:     	#633967;
+    background-size:        cover;
+
+    text-align:             center;
+}
+
+.centerBlock{
+    overflow:               visible;
+
+    display:                flex;
+    justify-content:        center;
+
+    width:                  100%;
+    height:                 100%;
 }
 
 /*
-    Верхняя панель
+    Top panel
 */
 
-#headerDiv{
-/*     position: -webkit-sticky;
-    position: sticky;
-    top: 0; */
+#logoImg{   
+    display:                inline;
+    position:               absolute;
+
+    margin-left:            2%;
 }
 
-#menuTopBar{          
-    width: 80%;
-    margin-left: 15%;
-    overflow: auto;  
+#menuTopBar{        
+    overflow:               auto;     
+    width:                  80%;
+
+    margin-left:            15%;
 }
 
 .menuTopBarElem, .dropdown-content, .menuTopBarElemSelected{
-    float: right;
-    overflow: hidden;
-    display: inline-block; 
-    margin: 10px; 
-    /* margin-top: 5px;  */
+    display:                inline; 
+    float:                  right; 
+
+    margin:                 10px; 
+    margin-top:             25px; 
 }
 
-.menuTopBarElem a, .dropbtn , .dropdown-content a, .menuTopBarElemSelected a{
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 22px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 400; 
-    line-height: 26.4px; 
+.menuTopBarElem a, .dropbtn, .dropdown-content a, .menuTopBarElemSelected a{
+    display:                inline-block;
+    color:                	#f099f7; 
 
-    display: inline-block;
-    color: #f099f7; 
-    text-decoration: none;
-    transform: scale(1,1);
+    font-family:            "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size:              22px; 
+    font-style:             normal; 
+    font-variant:           normal; 
+    font-weight:            400; 
+    line-height:            26.4px;    
+    text-decoration:        none;
 
-/*     margin:4px;
-    padding: 8px 10px; */
-
-    transition-property: transform;
-    transition-duration: .75s;
+    transform:              scale(1,1);
+    transition-property:    transform;
+    transition-duration:    .75s;
 }
 
 .dropdown-content{
-    display: none;
-    z-index: 1;
-    position: absolute;
-    min-width: 185px;
+    display:                block;
+    position:               absolute;
+
+    margin-left:            -50px;
+    margin-right:           auto;
+
+    min-width:              185px;
+    z-index:                1;
+
+    transform:              scale(0,0) translate(0px, -100px);
+    transition-property:    transform, opacity;
+    transition-duration:    .25s;
 }
 
 .dropdown-content a:first-child{
-    margin-top: -10px;
+    margin-top:             -25px;
 }
 
 .dropdown-content a{
-    display: block;
-    margin-left: 25px;
-    margin-top: -10px;
+    display:                block;
+
+    text-align:             center;
+    margin-top:             0px;
 }
 
 .menuTopBarElemSelected a{
-    color: #633967;
-    pointer-events: none;
+    color:                	#633967;
+    pointer-events:         none;
 }
 
 .menuTopBarElem a:hover{
-    color: #fac7ff;
-    transform: scale(1.015,1.015);
-    transition-duration: .5s;
+    color:                	#fac7ff;
+
+    transform:              scale(1.05,1.05);
+    transition-duration:    .5s;
 }
 
 .dropdown-content a:hover {
-    color: #fac7ff;
+    color:                	#fac7ff;
 }
 
 .menuTopBarElem:hover .dropdown-content {
-    display: none;/* block; */
+    display:                block;
+    opacity:                1;
+
+    transform:              scale(1,1) translate(0px, 0px);
+    transition-duration:    .35s;
 }
 
 /*
-    Наполнение страницы
+    Main elements     -----------------------------------------------------------------------------------------------------------------------
 */
 
-.custom-table{
-	display: table;
-    width: 100%;
-
-/* 	border: 5px solid red; */
-}
-
-.custom-row{
-	display: table-row;
-    margin: auto; 
-}
-
-
-.custom-cell{
-    display: table-cell;
-    width: 50%;
-    margin: auto;
-
-    /* border: 3px solid green;  */
-}
-
-
-#bodyDiv{
-
-}
-
 .bodyText{
-    position: relative;
-    float: right;
-    margin-top: 75px;
-    margin-right: 100px;
+    display:                inline;
+    color:                	#f099f7; 
+    position:               relative;
 
-    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; 
-    font-size: 135px; 
-    font-style: normal; 
-    font-variant: normal; 
-    font-weight: 700; 
-    line-height: 120px; 
+    margin-top:             175px;
+	/*
+    margin-right:           150px; 
+	*/
+    margin-left:            50px; 
 
-    display: inline-block;
-    color: #f099f7; 
-    text-decoration: none;
+    font-family:            "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size:              125px; 
+    font-style:             normal; 
+    font-variant:           normal; 
+    font-weight:            700; 
+    line-height:            120px; 
+    text-decoration:        none;
+
+    transform:              scale(1.0,1.0);
+    transition-property:    transform;
+    transition-duration:    .75s;
+}
+
+.bodyText404{
+    font-family:            "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size:              75px; 
+    font-style:             normal; 
+    font-variant:           normal; 
+    font-weight:            900; 
+    line-height:            65px; 
+    text-decoration:        underline;
+    color:                	#f099f7; 
+}
+
+/*CIRCLES*/
+.bodyCircle, .mainCircleMeme, .mainCircleMemeTop, .milosCircle, .milosCircleTop{
+    display:                inline-block; 
+    position:               relative;
+
+    width:                  400px;
+    height:                 400px;
+    
+    transform:              scale(1.0,1.0);
+    transition-property:    transform;
+    transition-duration:    .75s;
+
+    top:                    0;
+    left:                   0;
 }
 
 .bodyCircle{
-    position: relative;
-    display: inline-block; 
-    width: 400px;
-	height: 400px;
-	background: #f099f7;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-    border-radius: 50%;
+    margin-top:             80px;
+    margin-left:            150px; 
+
+	background:           	#f099f7;
+	-moz-border-radius:     50%;
+	-webkit-border-radius:  50%;
+    border-radius:          50%;
+
+    transition-property:    transform;
+    animation:              fadein .75s;
+}
+
+.mainCircleMeme, .milosCircle{
+    overflow:               hidden;
+    filter:                 contrast(1);
+
+    clip-path:              circle(50% at center);
+    margin-bottom:          -90px;
+
+    transition-property:    transform, clip-path;
+    animation:              fadeinMeme 1.0s;
+}
+
+.mainCircleMemeTop, .milosCircleTop{
+    filter:                 contrast(1);
+
+    position:               absolute;
+    clip-path:              none;
+
+    transition-property:    transform;
+    animation:              fadeinMeme 1.0s;
+}
+
+.milosCircle{
+    transition-property:    transform, clip-path, filter;
+}
+.milosCircle{
+    transition-property:    transform, filter;
+}
+/*
+    POPULAR    ------------------------------------------------------------------------------------------------------------------------------
+*/
+#blackBackPopular, #popularNameText, #popularText{
+    display:                none;
+}
+
+.popularNameTextOpen, .popularNameTextClose{
+    display:                inline-block;
+    color:                	#f099f7; 
+    position:               absolute;
+
+    font-family:            "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size:              75px; 
+    font-style:             normal; 
+    font-variant:           normal; 
+    font-weight:            700; 
+    line-height:            120px; 
+
+    text-decoration:        none;
+    text-align:             left;
     
-    top: 0;
-    left: 0;
+    margin-top:             180px;
+    margin-bottom:          15px;
+    margin-left:            500px;
+    margin-right:           15px;
+
+    z-index:                10;
+    
+    top:                    0;
+    left:                   0;
+}
+.popularTextOpen, .popularTextClose{
+    display:                inline-block;
+    color:                	#f099f7; 
+    position:               absolute;
+
+    font-family:            "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    font-size:              35px; 
+    font-style:             normal; 
+    font-variant:           normal; 
+    font-weight:            700; 
+    line-height:            40px; 
+
+    text-decoration:        none;
+    text-align:             left;
+    
+    margin-top:             300px;
+    margin-bottom:          15px;
+    margin-left:            500px;
+    margin-right:           15px;
+
+    z-index:                10;
+    
+    top:                    0;
+    left:                   0;
+}
+.popularNameTextOpen, .popularTextOpen{
+    opacity:                1;
+    animation:              fadeinText 0.65s forwards;
+}
+.popularNameTextClose, .popularTextClose{
+    opacity:                0;
+    animation:              fadeoutText 1.0s forwards;
 }
 
-.mainCircleMeme{
-    overflow: hidden;
-    position: relative;
-    display: inline-block; 
-    width: 400px;
-    height: 400px;    
-    clip-path: circle(50% at center);
-    margin-bottom: -90px;  /* affects .bodyCircle */
 
-    top: 0;
-    left: 0;
+.blackBackPopularOpen, .blackBackPopularClose{
+    display:                block;
 
-    background-size: contain;
+    background-color:     	black;
+    background-size:        cover;
+
+    width:                  100%;
+    height:                 100%;
+
+    z-index:                9;
+    position:               absolute;
+
+    transform:              scale(1.5,1.5);
+}
+.blackBackPopularOpen{
+    opacity:                .75;
+    animation:              fadeinBack 1.0s forwards;
+}
+.blackBackPopularClose{
+    opacity:                0;
+    animation:              fadeoutBack 1.0s forwards;
 }
 
-.mainCircleMemeTop{
-    position: absolute;
-    display: inline-block; 
-    width: 400px;
-    height: 400px;    
-    clip-path: none;
+/*CIRCLES*/
 
-    top: 0;
-    left: 0;
+.mainCircleMemeP, .mainCircleMemeTopP{
+    display:                inline-block; 
+
+    width:                  400px;
+    height:                 400px;   
+
+    margin-top:             -100px;
+    margin-left:            -100px;
+
+    transform:              scale(.5,.5);
+    transition-property:    transform;
+    transition-duration:    .75s;
+
+    top:                    0;
+    left:                   0;
+}
+
+.bodyCirclePopular{
+    display:                inline-block; 
+    position:               relative;
+
+    width:                  200px;
+    height:                 200px;   
+
+    margin-top:             auto;
+    margin-bottom:          15px;
+    margin-left:            15px;
+    margin-right:           15px;
+
+    transform:              scale(1,1);
+    transition-property:    transform;
+    transition-duration:    .75s;
+
+	background:             #f099f7;
+	-moz-border-radius:     50%;
+	-webkit-border-radius:  50%;
+    border-radius:          50%;
+}
+
+.mainCircleMemeP{
+    overflow:               hidden;
+    position:               relative;
+
+    clip-path:              circle(50% at center);
+    transition-property:    transform, clip-path;
+}
+.mainCircleMemeTopP{
+    position:               absolute;
+    clip-path:              none;
+}
+
+
+/*BIG VERSION*/
+.bodyCirclePopularBig, .bodyCirclePopularBigClose{
+    position:               absolute;
+    display:                inline-block; 
+    
+    margin-top:             150px;
+    margin-bottom:          15px;
+    margin-left:            75px;
+    margin-right:           15px;
+
+    width:                  400px;
+    height:                 400px;
+
+	background:           	#f099f7;
+	-moz-border-radius:     50%;
+	-webkit-border-radius:  50%;
+    border-radius:          50%;
+
+    z-index:                11;
+    
+    top:                    0;
+    left:                   0;
+}
+.bodyCirclePopularBig{
+    animation:              fadeinBigMeme 0.75s;
+}
+.bodyCirclePopularBigClose{
+    animation:              fadeoutBigMeme 0.75s forwards;
+}
+
+/*CIRCLES*/
+
+.mainCircleMemePBig, .mainCircleMemePBigClose, .mainCircleMemeTopPBig, .mainCircleMemeTopPBigClose{
+    display:                inline-block; 
+
+    width:                  400px;
+    height:                 400px;     
+
+    top:                    0;
+    left:                   0;
+}
+
+.mainCircleMemePBig, .mainCircleMemePBigClose{
+    overflow:               hidden;
+    position:               relative;
+
+    clip-path:              circle(50% at center);
+    z-index:                12;
+}
+.mainCircleMemePBig{
+    animation:              fadeinBigMeme 0.75s;
+}
+.mainCircleMemePBigClose{
+    animation:              fadeoutBigMemeClip 0.75s forwards;
+}
+
+.mainCircleMemeTopPBig, .mainCircleMemeTopPBigClose{
+    position:               absolute;
+    clip-path:              none;
+    
+    z-index:                13;
+}
+.mainCircleMemeTopPBig{
+    animation:              fadeinBigMeme 0.75s;
+}
+.mainCircleMemeTopPBigClose{
+    animation:              fadeoutBigMeme 0.75s forwards;
+}
+
+/*
+    Spooktober -------------------------------------------------------------------------------------------------------------------------------
+*/
+.spookyDudec{
+    display:                inline;
+    position:               absolute;
+
+    width:                  100%;
+    height:                 15%;
+
+    margin-top:             150px;
+    z-index:                10;
+
+    top:                    0;
+    left:                   0;
+}
+
+/*
+    NNN    -----------------------------------------------------------------------------------------------------------------------------------
+*/
+.NNN{
+    width:                  25%;
+    height:                 auto;
+
+    margin:                 -70px;
+    position:               fixed;
+
+    transform:              scale(1,1);
+    transition-property:    transform;
+    transition-duration:    .75s;
+
+    bottom:                 0;
+    right:                  0;
+}
+
+.NNNMeme{
+    position:               absolute;
+
+    width:                  35%;
+    height:                 70%;
+
+    margin-right:           100px;
+    margin-top:             140px;
+
+    filter:                 blur(30px);
+    transition-property:    filter;
+    transition-duration:    .75s;
+
+    top:                    0;
+    right:                  0;
+}
+
+.nnnTable{
+    position:               absolute;
+    display:                table;
+
+    width:                  50%;
+
+    margin:                 50px;
+    margin-top:             150px;
+
+    top:                    0;
+    left:                   0;
+}
+
+.nnnImg{
+    max-width:              100%;
+    height:                 auto;
+
+    margin:                 5px;
+}
+
+
+/*
+    DRAGONBORN    --------------------------------------------------------------------------------------------------------------------------
+*/
+.BBT, .BBTAlbumCover, .BBTEmoji, .BBTTrack, .BBTVideo{
+    position:               fixed;
+
+    width:                  25%;
+    height:                 auto;
+}
+.BBTAlbumCover, .BBTEmoji, .BBTTrack, .BBTVideo{
+    top:                    0;
+    left:                   0;
+}
+.BBTEmoji, .BBTTrack, .BBTVideo{
+    display:                inline-block;
+    margin-left:            390px;
+}
+.BBT, .BBTEmoji{
+    transition-property:    transform;
+    transition-duration:    .75s;
+}
+
+.BBT{
+    margin:                 -50px;
+    transform:              translate(200px, 0px) rotate(0deg);
+
+    bottom:                 0;
+    right:                  0;
+}
+
+.BBTAlbumCover{
+    margin-top:             190px;
+    margin-left:            30px;
+
+    box-shadow:             10px 10px 42px -6px rgba(0,0,0,0.75);
+}
+
+.BBTEmoji{
+    position:               absolute;
+    margin-top:             575px;
+
+    transform:              translate(0px, 0px) rotate(0deg) scale(1,1);
+    z-index:                10;
+}
+
+.BBTTrack{
+    margin-top:             275px;
+}
+
+.BBTVideo{
+    width:                  40%;
+    margin-top:             205px;
+
+    z-index:                0;
+}
+
+/*
+    ANIMATIONS    ----------------------------------------------------------------------------------------------------------------------------
+*/
+
+/*HOMEPAGE*/
+
+.bodyCircle:hover{
+    transform:              scale(.9,.9);
+    transition-duration:    .75s;
+}
+
+.bodyCircle:hover .mainCircleMeme{
+    transform:              scale(1.04,1.04);
+    clip-path:              circle(48.2% at center);
+    transition-duration:    .75s;
+}
+
+.bodyCircle:hover .mainCircleMemeTop{
+    transform:              scale(1.04,1.04);
+    transition-duration:    .75s;
+}
+
+.bodyCircle:hover .milosCircle{
+    transform:              scale(1.04,1.04);
+    filter:                 contrast(5);
+    clip-path:              circle(48.2% at center);
+    transition-duration:    .75s;
+}
+
+.bodyCircle:hover .milosCircleTop{
+    transform:              scale(1.04,1.04);
+    filter:                 contrast(5);
+    transition-duration:    .75s;
+}
+
+.bodyCircle:hover + .bodyText{
+    transform:              scale(1.1,1.1);
+    transition-duration:    .75s;
+}
+
+/*POPULAR*/
+
+.bodyCirclePopular:hover{
+    transform:              scale(1.2,1.2);
+    transition-duration:    .75s;
+}
+
+.bodyCirclePopular:hover .mainCircleMemeP{
+    transform:              scale(.54,.54);
+    clip-path:              circle(46.4% at center);
+    transition-duration:    .75s;
+}
+
+.bodyCirclePopular:hover .mainCircleMemeTopP{
+    transform:              scale(.54,.54);
+    transition-duration:    .75s;
+}
+
+/*
+    NNN
+*/
+.NNN:hover{
+    transform:              scale(1.2,1.2);
+    transition-duration:    .75s;
+}
+
+.NNNMeme:hover{
+    filter:                 blur(0px);
+    transition-duration:    .75s;
+}
+
+/*
+    Dragonborn
+*/
+.BBT:hover{
+    transform:              translate(-50px, 10px) rotate(-15deg);
+    transition-duration:    .75s;
+}
+
+.BBTEmoji:hover{
+    transform:              translate(-50px, -210px) rotate(-15deg) scale(1.5,1.5);
+    transition-duration:    .35s;
+}
+
+
+@keyframes fadein {
+    0% {
+        opacity:            0;
+        transform:          scale(0.0,0.0);
+    }
+    50% {
+        opacity:            .8;
+        transform:          scale(1.1,1.1);
+    }
+    100% {
+        opacity:            1;
+        transform:          scale(1.0,1.0);
+    }
+}
+
+@keyframes fadeinMeme {
+    0% {
+        opacity:            0;
+        transform:          scale(2.0,2.0);
+    }
+    50% {
+        opacity:            0;
+        transform:          scale(2.0,2.0);
+    }
+    100% {
+        opacity:            1;
+        transform:          scale(1.0,1.0);
+    }
+}
+
+/*BIG + Back*/
+
+@keyframes fadeinBigMeme{
+    0% {
+        opacity:            0;
+        transform:          scale(0.0,0.0);
+    }
+    50% {
+        opacity:            1;
+        transform:          scale(1.1,1.1);
+    }
+    100% {
+        opacity:            1;
+        transform:          scale(1.0,1.0);
+    }
+}
+
+@keyframes fadeoutBigMeme{
+    0% {
+        opacity:            1;
+        transform:          scale(1.0,1.0);
+    }
+    50% {
+        opacity:            1;
+        transform:          scale(1.1,1.1);
+    }
+    100% {
+        opacity:            0;
+        transform:          scale(0.0,0.0);
+    }
+}
+
+/*Clipped*/
+@keyframes fadeoutBigMemeClip{
+    0% {
+        opacity:            1;
+        transform:          scale(1.0,1.0);
+        clip-path:          circle(50% at center);
+    }
+    50% {
+        opacity:            1;
+        transform:          scale(1.1,1.1);
+        clip-path:          circle(45.5% at center);
+    }
+    100% {
+        opacity:            0;
+        transform:          scale(0.0,0.0);
+        clip-path:          circle(50% at center);
+    }
+}
+
+/*back*/
+@keyframes fadeinBack {
+    0% {
+        opacity:            0;
+    }
+    100% {
+        opacity:            .85;
+    }
+}
+
+@keyframes fadeoutBack {
+    0% {
+        max-height:         auto;
+        opacity:            .85;
+    }
+    99% {
+        max-height:         auto;
+    }
+    100% {
+        max-height:         0;
+        opacity:            0;
+    }
+}
+
+/*text*/
+@keyframes fadeinText {
+    0% {
+        transform:          translate(-500px, 0px);
+        opacity:            0;
+    }
+    100% {
+        transform:          translate(0px, 0px);
+        opacity:            1;
+    }
+}
+
+@keyframes fadeoutText {
+    0% {
+        transform:          translate(0px, 0px);
+        max-height:         auto;
+        opacity:            .85;
+    }
+    30% {
+        max-height:         auto;
+        opacity:            0;
+    }
+    100% {
+        transform:          translate(-1500px, 0px);
+        max-height:         0;
+    }
 }
